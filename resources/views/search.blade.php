@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','搜索')
+@section('title','Search')
 @section('content')
     <div class="container">
         <div class="row">
@@ -7,10 +7,10 @@
                 @if($posts->count() == 0)
                     <div class="widget widget-default">
                         <div class="widget-header">
-                            <h3>搜索 "{{ request('q') }}"</h3>
+                            <h3>Search "{{ request('q') }}"</h3>
                         </div>
                         <div class="widget-body">
-                            <h4>什么也没搜到...</h4>
+                            <h4>Nothing Found...</h4>
                         </div>
                     </div>
                 @else

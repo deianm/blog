@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
-@section('title','分类')
+@section('title','Classification')
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="widget widget-default">
                 <div class="widget-header">
-                    <h6><i class="fa fa-folder fa-fw"></i>分类</h6>
+                    <h6><i class="fa fa-folder fa-fw"></i>Classification</h6>
                 </div>
                 <div class="widget-body">
                     <a class="btn pull-right" role="button" data-toggle="modal" data-target="#add-category-modal">
@@ -14,10 +14,10 @@
                     <table class="table table-hover table-bordered table-responsive" style="overflow: auto">
                         <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>日期</th>
-                            <th>文章</th>
-                            <th>操作</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Article</th>
+                            <th>Operating</th>
                         </tr>
                         </thead>
                         <tbody>

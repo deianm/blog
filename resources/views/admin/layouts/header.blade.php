@@ -13,7 +13,7 @@
             </div>
             <div class="collapse navbar-collapse" id="blog-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route('post.create') }}">Create Post</a></li>
+                    <li><a href="{{ route('post.create') }}">New Article</a></li>
                     <li><a href="{{ route('admin.images') }}">Admin Images</a></li>
                     <li><a href="{{ route('admin.files') }}">Admin Files</a></li>
                     <li><a href="{{ route('admin.settings') }}">Admin Settings</a></li>

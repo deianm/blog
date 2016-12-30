@@ -7,7 +7,7 @@
             <div class="widget widget-default">
                 <div class="widget-header">
                     <h6>
-                        <i class="fa fa-cog fa-fw"></i>设置
+                        <i class="fa fa-cog fa-fw"></i>Admin Settings
                     </h6>
                 </div>
                 <div class="widget-body">
@@ -17,7 +17,7 @@
                                 <input type="radio"
                                        {{ isset($google_analytics) && $google_analytics == 'true' ? ' checked ':'' }}
                                        name="google_analytics"
-                                       value="true">启用谷歌分析
+                                       value="true">Enable Google Analytics
                             </label>
                         </div>
                         <div class="radio">
@@ -25,7 +25,7 @@
                                 <input type="radio"
                                        {{ isset($google_analytics) && $google_analytics == 'true' ? '':' checked ' }}
                                        name="google_analytics"
-                                       value="false">禁用谷歌分析
+                                       value="false">Disable Google Analytics
                             </label>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                                 <input type="radio"
                                        {{ isset($enable_mail_notification) && $enable_mail_notification == 'true' ? ' checked ':'' }}
                                        name="enable_mail_notification"
-                                       value="true">启用邮件通知
+                                       value="true">Enable Email Notifications
                             </label>
                         </div>
                         <div class="radio">
@@ -44,7 +44,7 @@
                                 <input type="radio"
                                        {{ isset($enable_mail_notification) && $enable_mail_notification == 'true' ? '':' checked ' }}
                                        name="enable_mail_notification"
-                                       value="false">禁用邮件通知
+                                       value="false">Disable Email Notifications
                             </label>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 <input type="radio"
                                        {{ (isset($comment_type) && $comment_type == 'none') ? ' checked ':'' }}
                                        name="comment_type"
-                                       value="none">关闭评论
+                                       value="none">Disable Comments
                             </label>
                         </div>
                         <div class="radio">
@@ -63,7 +63,7 @@
                                 <input type="radio"
                                        {{ (!isset($comment_type) || $comment_type == 'raw') ? ' checked ':'' }}
                                        name="comment_type"
-                                       value="raw">自带评论
+                                       value="raw">Enable Comments
                             </label>
                         </div>
                         <div class="radio">
@@ -79,7 +79,7 @@
                                 <input type="radio"
                                        {{ isset($comment_type) && $comment_type == 'duoshuo' ? ' checked':'' }}
                                        name="comment_type"
-                                       value="duoshuo">多说
+                                       value="duoshuo">Duoshuo
                             </label>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                                 <input type="radio"
                                        {{ isset($enable_hot_posts) && $enable_hot_posts == 'true' ? ' checked ':'' }}
                                        name="enable_hot_posts"
-                                       value="true">启用热门文章
+                                       value="true">Disable Popular Posts
                             </label>
                         </div>
                         <div class="radio">
@@ -98,22 +98,22 @@
                                 <input type="radio"
                                        {{ isset($enable_hot_posts) && $enable_hot_posts == 'true' ? '':' checked ' }}
                                        name="enable_hot_posts"
-                                       value="false">禁用热门文章
+                                       value="false">Enable Popular Posts
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="google_trace_id" class="col-sm-2 control-label">跟踪ID</label>
+                        <label for="google_trace_id" class="col-sm-2 control-label">Track ID</label>
                         <div class="col-sm-8">
                             <input type="text" name="google_trace_id" class="form-control" id="google_trace_id"
-                                   placeholder="谷歌跟踪ID"
+                                   placeholder="Google Tracking ID"
                                    value="{{ $google_trace_id or ''}}">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="author" class="col-sm-2 control-label">作者</label>
+                        <label for="author" class="col-sm-2 control-label">Author</label>
                         <div class="col-sm-8">
                             <input type="text" name="author" class="form-control" id="author"
                                    value="{{ $author or ''}}">
@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="description" class="col-sm-2 control-label">描述</label>
+                        <label for="description" class="col-sm-2 control-label">Description</label>
                         <div class="col-sm-8">
                             <input type="text" name="description" class="form-control" id="description"
                                    value="{{ $description or ''}}">
@@ -129,7 +129,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="avatar" class="col-sm-2 control-label">头像</label>
+                        <label for="avatar" class="col-sm-2 control-label">Avatar</label>
                         <div class="col-sm-8">
                             <input type="text" name="avatar" class="form-control" id="avatar"
                                    value="{{ $avatar or ''}}">
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="avatar" class="col-sm-2 control-label">多说 ID</label>
+                        <label for="avatar" class="col-sm-2 control-label">Duoshuo ID</label>
                         <div class="col-sm-8">
                             <input type="text" name="duoshuo_shortname" class="form-control" id="avatar"
                                    value="{{ $duoshuo_shortname or ''}}">
@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="avatar" class="col-sm-2 control-label">Github用户名</label>
+                        <label for="avatar" class="col-sm-2 control-label">Github Username</label>
                         <div class="col-sm-8">
                             <input type="text" name="github_username" class="form-control" id="avatar"
                                    value="{{ $github_username or ''}}">
@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Js</label>
+                        <label class="col-sm-2 control-label">JS</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="site_js"
                                    value="{{ $site_js or ''}}">
@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Css</label>
+                        <label class="col-sm-2 control-label">CSS</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="site_css"
                                    value="{{ $site_css or ''}}">
@@ -177,7 +177,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">标题</label>
+                        <label class="col-sm-2 control-label">Website Title</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="site_title"
                                    value="{{ $site_title or ''}}">
@@ -185,22 +185,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">关键字</label>
+                        <label class="col-sm-2 control-label">Website Keywords</label>
                         <div class="col-sm-8">
-                            <input placeholder="网站关键字" class="form-control" type="text" name="site_keywords"
+                            <input class="form-control" type="text" name="site_keywords"
                                    value="{{ $site_keywords or ''}}">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">网站描述</label>
+                        <label class="col-sm-2 control-label">Website Description</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="site_description"
                                    value="{{ $site_description or '' }}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">每页数量</label>
+                        <label class="col-sm-2 control-label">Page Size</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="number" name="page_size"
                                    value="{{ $page_size or 7 }}">
@@ -208,7 +208,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">热门文章数量</label>
+                        <label class="col-sm-2 control-label">Hot Article Count</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="number" name="hot_posts_count"
                                    value="{{ $hot_posts_count or 5 }}">
@@ -217,14 +217,14 @@
 
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">简介图片</label>
+                        <label class="col-sm-2 control-label">Profile Image</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="profile_image"
                                    value="{{ $profile_image or ''}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">背景图片</label>
+                        <label class="col-sm-2 control-label">Background Image</label>
                         <div class="col-sm-8">
                             <input class="form-control" type="text" name="background_image"
                                    value="{{ $background_image or ''}}">
@@ -235,7 +235,7 @@
                     <div class="form-group">
                         <div class="col-sm-8 col-sm-offset-2">
                             <button type="submit" class="btn bg-primary">
-                                保存
+                                Save Settings
                             </button>
                         </div>
                     </div>

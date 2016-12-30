@@ -31,13 +31,13 @@
             .click(function () {
                 var deleteForm = $(this).find("form");
                 swal({
-                        title: "你确定?",
-                        text: "你将会删除" + $(this).data('modal-target'),
+                        title: "Are you sure?",
+                        text: "You are about to delete" + $(this).data('modal-target'),
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
-                        cancelButtonText: "再考虑考虑",
-                        confirmButtonText: "确定删除!",
+                        cancelButtonText: "Never mind ;)",
+                        confirmButtonText: "Confirm >:)",
                         closeOnConfirm: true
                     },
                     function () {

@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
-@section('title','图片')
+@section('title','Images')
 @section('content')
     <div class="row">
         <div class="widget widget-default">
             <div class="widget-header">
-                <h6><i class="fa fa-file-image-o fa-fw"></i>图片({{ $image_count }})</h6>
+                <h6><i class="fa fa-file-image-o fa-fw"></i>Images ({{ $image_count }})</h6>
             </div>
             <div class="widget-body">
                 <form role="form" class="form-horizontal" action="{{ route('upload.image') }}"
@@ -21,7 +21,7 @@
                         </div>
                         <div class="col-xs-2">
                             <button type="submit" class="btn btn-primary">
-                                上传
+                                Upload
                             </button>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
         @empty
-            <h3 class="center-block meta-item">没有图片</h3>
+            <h3 class="center-block meta-item">No Images...</h3>
         @endforelse
     </div>
     @if($images->lastPage() > 1)

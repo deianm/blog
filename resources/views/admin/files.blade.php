@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="widget widget-default">
                 <div class="widget-header">
-                    <h6><i class="fa fa-file fa-fw"></i>文件</h6>
+                    <h6><i class="fa fa-file fa-fw"></i>Raw Files</h6>
                 </div>
                 <div class="widget-body">
                     <form role="form" class="form-horizontal" action="{{ route('upload.file') }}"
@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-xs-2">
                                 <button type="submit" class="btn btn-primary">
-                                    上传
+                                    Upload
                                 </button>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-xs-2">
                                 <button type="submit" class="btn btn-primary">
-                                    上传
+                                    Upload
                                 </button>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-xs-2">
                                 <button type="submit" class="btn btn-primary">
-                                    上传
+                                    Upload
                                 </button>
                             </div>
                         </div>
@@ -71,14 +71,14 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label class="col-xs-2 col-xs-offset-1 control-label">
-                                其他文件（如文章附件）
+                                Other Files（Such as article attachments）
                             </label>
                             <div class="col-xs-6">
                                 <input class="form-control" type="file" name="file">
                             </div>
                             <div class="col-xs-2">
                                 <button type="submit" class="btn btn-primary">
-                                    上传
+                                    Upload
                                 </button>
                             </div>
                         </div>
