@@ -46,6 +46,11 @@ Route::patch('/user/upload/info', ['uses' => 'UserController@update', 'as' => 'u
 Route::get('/commentable/{commentable_id}/comments', ['uses' => 'CommentController@show', 'as' => 'comment.show']);
 Route::resource('comment', 'CommentController', ['only' => ['store', 'destroy', 'edit', 'update']]);
 
+/**
+ *example
+ */
+Route::get('/example', ['uses' => 'ExampleController@index']);
+
 
 // SiteMap
 Route::get('sitemap', 'SiteMapController@index');
@@ -81,7 +86,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
      */
     Route::post('/comment/{comment}/restore', ['uses' => 'CommentController@restore', 'as' => 'comment.restore']);
 
-    /***
+    /**
      * post
      */
 
