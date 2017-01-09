@@ -70,7 +70,7 @@
         <li class="span3 clearfix" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
@@ -80,7 +80,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Art Project</h4>
 
@@ -91,7 +91,7 @@
         <li class="span3" data-tag='media'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Media Project</h4>
 
@@ -102,7 +102,7 @@
         <li class="span3" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
@@ -112,7 +112,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Art Project</h4>
                     </div>
@@ -122,7 +122,7 @@
         <li class="span3" data-tag='media'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Media Project</h4>
                     </div>
@@ -132,7 +132,7 @@
         <li class="span3 clearfix" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
@@ -142,7 +142,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Art Project</h4>
                     </div>
@@ -152,7 +152,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Art Project</h4>
                     </div>
@@ -162,7 +162,7 @@
         <li class="span3" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
@@ -172,7 +172,7 @@
         <li class="span3" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
@@ -182,7 +182,7 @@
         <li class="span3" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="http://placehold.it/270x170"/>
+                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
                     <div class="caption">
                         <h4>Brand Project</h4>
                     </div>
