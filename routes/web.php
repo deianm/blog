@@ -49,8 +49,14 @@ Route::resource('comment', 'CommentController', ['only' => ['store', 'destroy', 
 /**
  *example
  */
-Route::get('/example', ['uses' => 'ExampleController@index']);
+Route::get('/examples/datatables', ['uses' => 'ExampleController@index']);
 
+/*
+ * Datatables examples
+ */
+
+Route::get('/datatables', ['uses' => 'DatatablesController@index']);
+Route::get('/datatables-example-data', ['uses' => 'DatatablesController@data']);
 
 // SiteMap
 Route::get('sitemap', 'SiteMapController@index');

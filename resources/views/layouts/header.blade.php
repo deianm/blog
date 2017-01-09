@@ -25,8 +25,26 @@
             </div>
             <div class="collapse navbar-collapse fix-top" id="blog-navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li><a class="menu-item" href="/blog">Home</a></li>
                     <li><a class="menu-item" href="{{ route('achieve') }}">Archives</a></li>
-                    @if(XblogConfig::getValue('github_username'))
+                    {{-- Examples Dropdown --}}
+                    <ul class="nav navbar-nav navbar-right blog-navbar">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Examples
+                                    <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/examples/datatables">Datatables</a></li>
+                                    <li><a href="#">Coming Soon!</a></li>
+                                    <li><a href="#">Coming Soon!</a></li>
+                                    <li><a href="#">Coming Soon!</a></li>
+                                    <li><a href="#">Coming Soon!</a></li>
+                                    <li><a href="#">Coming Soon!</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                @if(XblogConfig::getValue('github_username'))
                         <li><a class="menu-item" href="{{ route('projects') }}">Projects</a></li>
                     @endif
                     @foreach($pages as $page)

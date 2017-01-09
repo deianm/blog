@@ -43,7 +43,6 @@
     <script src="{{ $site_js }}"></script>
 @else
     <script src="{{ elixir('js/app.js') }}"></script>
-    <script src="{{ elixir('js/vue.js') }}"></script>
 @endif
 @yield('script')
 </body>
