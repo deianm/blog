@@ -37,20 +37,20 @@
                         {{ $image->name }}
                     </label>
                     <div class="js-imgLiquid" style="width: 100% ;height: 250px;">
-                        <img src="{{ $image->key }}">
+                        <img src="{{ asset($image->key) }}">
                     </div>
                     <div class="widget-footer">
                         <div class="widget-meta">
                             <button id="clipboard-btn" class="btn btn-default"
                                     type="button"
-                                        data-clipboard-text="{{ $image->key }}"
+                                        data-clipboard-text="{{ asset($image->key) }}"
                                     data-toggle="tooltip"
                                     data-placement="left"
                                     title="Copied">
                                 <i class="fa fa-copy fa-fw"></i>
                             </button>
                             <a  class="btn btn-primary"
-                                    href="{{ $image->key }}"
+                                    href="{{ asset($image->key) }}"
                                     target="_blank">
                                 <i class="fa fa-eye fa-fw"></i>
                             </a>
@@ -58,7 +58,7 @@
                                     data-method="delete"
                                     data-modal-target="{{ $image->name }}"
                                     data-url="{{ route('delete.file').'?key='.$image->key.'&type=image' }}"
-                                    data-key="{{ $image->key }}">
+                                    data-key="{{ asset($image->key) }}">
                                 <i class="fa fa-trash-o fa-fw"></i>
                             </button>
                             {{ formatBytes($image->size) }}
