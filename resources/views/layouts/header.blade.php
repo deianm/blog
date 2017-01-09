@@ -71,7 +71,7 @@
                     @endif
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="get" action="{{ route('search') }}">
-                    <input type="text" class="form-control" name="q" placeholder="搜索" required>
+                    <input type="text" class="form-control" name="q" placeholder="Search" required>
                 </form>
             </div>
         </nav>

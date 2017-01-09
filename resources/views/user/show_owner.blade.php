@@ -6,10 +6,10 @@
         <input name="_method" type="hidden" value="patch">
         {{--<img class="img-thumbnail" src="{{ $user->avatar }}" width="256" height="256">--}}
         <div class="form-group">
-            <label class="control-label">修改头像：</label>
+            <label class="control-label">Modify Avatar：</label>
             <input type="file" class="form-control" name="image" required="">
         </div>
-        <button class="btn btn-primary" id="upload-button" type="submit">上传头像</button>
+        <button class="btn btn-primary" id="upload-button" type="submit">Upload Avatar</button>
     </form>
 
     <form class="mt-30" method="post" action="{{ route('user.upload.profile') }}"
@@ -17,16 +17,16 @@
         {{ csrf_field() }}
         <input name="_method" type="hidden" value="patch">
         <div class="form-group">
-            <label>修改简介图片：</label>
+            <label>Edit Background Image：</label>
             <input class="form-control" type="file" name="image" required="">
         </div>
-        <button class="btn btn-primary" id="upload-button" type="submit">上传简介图片</button>
+        <button class="btn btn-primary" id="upload-button" type="submit">Upload Image</button>
     </form>
 
     @if(!$user->github_id)
         <div class="form-group mt-30">
             <a style="text-decoration: none" class="btn btn-primary" href="{{ route('github.login') }}">
-                绑定<i class="fa fa-github fa-lg fa-fw"></i>
+                Binding<i class="fa fa-github fa-lg fa-fw"></i>
             </a>
         </div>
     @endif
@@ -36,19 +36,19 @@
         {{ csrf_field() }}
         <input name="_method" type="hidden" value="patch">
         <div class="form-group">
-            <label>名称：</label>
+            <label>Name：</label>
             <input class="form-control" name="name" type="text" value="{{ $user->name }}" readonly>
         </div>
         <div class="form-group">
-            <label>真实姓名：</label>
+            <label>Actual Name：</label>
             <input class="form-control" name="real_name" type="text" value="{{ $user->real_name }}">
         </div>
         <div class="form-group">
-            <label>个人网站：</label>
+            <label>Website：</label>
             <input class="form-control" name="website" type="text" value="{{ $user->website }}">
         </div>
         <div class="form-group">
-            <label>描述：</label>
+            <label>Description：</label>
             <input class="form-control" name="description" type="text" value="{{ $user->description }}">
         </div>
         <div class="form-group">

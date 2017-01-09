@@ -10,7 +10,7 @@
         <h5 class="widget-user-desc">{{ $description or 'Description' }}</h5>
     </div>
     <div class="widget-user-image">
-        <img class="img-circle" src="{{ $avatar or '' }}" alt="User Avatar">
+        <img class="img-circle" src="{{ $avatar or '' }}">
     </div>
     <div class="widget-user-footer">
         <div class="row">
