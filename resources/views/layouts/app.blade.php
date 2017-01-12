@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ $author or '' }}">
-    <title>@yield('title') {{ $site_title or '' }} </title>
     <meta name="keywords" content="@yield('keywords') {{ $site_keywords or '' }}">
     <meta name="description" content="@yield('description') {{ $site_description or '' }}">
     <meta property="og:type" content="website">
