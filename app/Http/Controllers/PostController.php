@@ -172,9 +172,9 @@ class PostController extends Controller
         }
         if ($result) {
             $this->clearAllCache();
-            return redirect($redirect)->with('success', '删除成功');
+            return redirect($redirect)->with('success', 'Success');
         } else
-            return redirect($redirect)->withErrors('删除失败');
+            return redirect($redirect)->withErrors('Failed to delete');
     }
 
     private function validatePostForm(Request $request, $update = false)

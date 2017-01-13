@@ -81,7 +81,9 @@
                         </li>
                     @else
                         <li><a href="{{ url('login') }}">Login</a></li>
+                    {{-- Don't display to people for now
                         <li><a href="{{ url('register') }}">Register</a></li>
+                     --}}
                     @endif
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="get" action="{{ route('search') }}">

@@ -16,7 +16,7 @@
                 <span class="name">
                     <a href="{{ $href }}">{{ $comment->username }}</a>
                     @if(isAdminById($comment->user_id))
-                        <label class="role-label">博主</label>
+                        <label class="role-label">Blogger</label>
                     @endif
                 </span>
                 <span class="comment-operation pull-right">
@@ -44,5 +44,5 @@
         </div>
     </div>
 @empty
-    <p class="meta-item center-block">暂无评论~~</p>
+    <p class="meta-item center-block">No Comment Yet~~</p>
 @endforelse

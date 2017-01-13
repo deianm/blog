@@ -66,9 +66,9 @@ class FileController extends Controller
         $this->unknownFileRepository->setTag($type);
         $result = $this->unknownFileRepository->delete($key);
         if ($result) {
-            return back()->with('success', '删除成功');
+            return back()->with('success', 'Success');
         }
-        return back()->with('success', '删除失败');
+        return back()->with('success', 'Failed to delete');
     }
 
     private function upload(Request $request, $type)
