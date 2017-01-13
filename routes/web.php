@@ -46,17 +46,15 @@ Route::patch('/user/upload/info', ['uses' => 'UserController@update', 'as' => 'u
 Route::get('/commentable/{commentable_id}/comments', ['uses' => 'CommentController@show', 'as' => 'comment.show']);
 Route::resource('comment', 'CommentController', ['only' => ['store', 'destroy', 'edit', 'update']]);
 
-/**
- *example
- */
+// Examples Index
 Route::get('/examples/datatables', ['uses' => 'ExampleController@index']);
 
-/*
- * Datatables examples
- */
-
+// Datatables examples
 Route::get('/datatables', ['uses' => 'DatatablesController@index']);
 Route::get('/datatables-example-data', ['uses' => 'DatatablesController@data']);
+
+// Resume
+Route::get('/resume', ['uses' => 'ResumeController@index']);
 
 // SiteMap
 Route::get('sitemap', 'SiteMapController@index');

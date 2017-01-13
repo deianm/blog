@@ -54,13 +54,14 @@
                             -- END
                         </p>
                     </div>
+                    {{--
                     <div class="post-info-panel">
                         <p class="info">
                             <label class="info-title">版权声明:</label><i class="fa fa-fw fa-creative-commons"></i>自由转载-非商用-非衍生-保持署名（<a
                                     href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）
                         </p>
                         <p class="info">
-                            <label class="info-title">发表日期:</label>{{ $post->created_at->format('Y年m月d日') }}
+                            <label class="info-title">Created :</label>{{ $post->created_at->format('Y年m月d日') }}
                         </p>
                         @if(isset($post->published_at) && $post->published_at)
                             <p class="info">
@@ -74,6 +75,7 @@
                             @endforeach
                         </p>
                     </div>
+                    --}}
                 </div>
             </div>
         </div>
