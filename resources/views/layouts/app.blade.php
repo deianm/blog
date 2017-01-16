@@ -36,12 +36,13 @@
     </div>
     @yield('content')
 </div>
-@include('layouts.footer')
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>
 @else
     <script src="{{ elixir('js/app.js') }}"></script>
 @endif
 @yield('script')
+@yield('dt-js')
+@include('layouts.footer')
 </body>
 </html>

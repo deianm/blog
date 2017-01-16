@@ -55,8 +55,8 @@ class FileController extends Controller
             'type' => 'required',
         ]);
         if ($this->upload($request, $request->get('type')))
-            return back()->with('success', '上传成功');
-        return back()->withErrors('上传失败');
+            return back()->with('success', 'Success');
+        return back()->withErrors('Error');
     }
 
     public function deleteFile(Request $request)

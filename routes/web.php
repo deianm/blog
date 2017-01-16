@@ -53,6 +53,16 @@ Route::get('/examples/datatables', ['uses' => 'ExampleController@index']);
 Route::get('/datatables', ['uses' => 'DatatablesController@index']);
 Route::get('/datatables-example-data', ['uses' => 'DatatablesController@data']);
 
+
+
+
+Route::post('/examples/datatables/basic-ssp', ['uses' => 'Examples\DatatablesBasicSSPController@index', 'as' => 'basic-ssp']);
+Route::get('/examples/datatables/basic-ssp', ['uses' => 'Examples\DatatablesBasicSSPController@index', 'as' => 'basic-ssp']);
+
+Route::post('/examples/datatables/basic-ssp-data', ['uses' => 'Examples\DatatablesBasicSSPController@allusers', 'as' => 'basic-ssp-data']);
+Route::get('/examples/datatables/basic-ssp-data', ['uses' => 'Examples\DatatablesBasicSSPController@allusers', 'as' => 'basic-ssp-data']);
+
+
 // Resume
 Route::get('/resume', ['uses' => 'ResumeController@index']);
 
