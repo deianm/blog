@@ -49,19 +49,45 @@ Route::resource('comment', 'CommentController', ['only' => ['store', 'destroy', 
 // Examples Index
 Route::get('/examples/datatables', ['uses' => 'ExampleController@index']);
 
-// Datatables examples
-Route::get('/datatables', ['uses' => 'DatatablesController@index']);
-Route::get('/datatables-example-data', ['uses' => 'DatatablesController@data']);
+// Datatables examples //
 
-
-
-
+//View
 Route::post('/examples/datatables/basic-ssp', ['uses' => 'Examples\DatatablesBasicSSPController@index', 'as' => 'basic-ssp']);
 Route::get('/examples/datatables/basic-ssp', ['uses' => 'Examples\DatatablesBasicSSPController@index', 'as' => 'basic-ssp']);
 
+//Basic
 Route::post('/examples/datatables/basic-ssp-data', ['uses' => 'Examples\DatatablesBasicSSPController@allusers', 'as' => 'basic-ssp-data']);
 Route::get('/examples/datatables/basic-ssp-data', ['uses' => 'Examples\DatatablesBasicSSPController@allusers', 'as' => 'basic-ssp-data']);
 
+
+// Coupon Routes //
+Route::post('/examples/coupon-system', ['uses' => 'Examples\CouponSystemController@index', 'as' => 'coupon-system']);
+Route::get('/examples/coupon-system', ['uses' => 'Examples\CouponSystemController@index', 'as' => 'coupon-system']);
+
+//Coupon Generator Routes
+Route::get( '/examples/coupon-system/get_all_coupons', 'Examples\CouponSystemController@getAllCoupons' );
+Route::post( '/examples/coupon-system/get_all_coupons', 'Examples\CouponSystemController@getAllCoupons' );
+
+Route::get( '/examples/coupon-system/generate_ajax_coupon', 'Examples\CouponSystemController@generateCoupon' );
+Route::post( '/examples/coupon-system/generate_ajax_coupon', 'Examples\CouponSystemController@generateCoupon' );
+
+Route::get( '/examples/coupon-system/confirmed_ajax_coupon', 'Examples\CouponSystemController@submitCoupon' );
+Route::post( '/examples/coupon-system/confirmed_ajax_coupon', 'Examples\CouponSystemController@submitCoupon' );
+
+Route::post( '/examples/coupon-system/get_advertiser_list', 'Examples\CouponSystemController@getAdvertiserList' );
+Route::get( '/examples/coupon-system/get_advertiser_list', 'Examples\CouponSystemController@getAdvertiserList' );
+
+Route::post( '/examples/coupon-system/pause_coupon', 'Examples\CouponSystemController@pauseCoupon' );
+Route::get( '/examples/coupon-system/pause_coupon', 'Examples\CouponSystemController@pauseCoupon' );
+
+Route::post( '/examples/coupon-system/coupon_usage', 'Examples\CouponSystemController@couponUsage' );
+Route::get( '/examples/coupon-system/coupon_usage', 'Examples\CouponSystemController@couponUsage' );
+
+Route::post( '/examples/coupon-system/reverse_coupon', 'Examples\CouponSystemController@resumeCoupon' );
+Route::get( '/examples/coupon-system/reverse_coupon', 'Examples\CouponSystemController@resumeCoupon' );
+
+Route::post( '/examples/coupon-system/delete_coupon', 'Examples\CouponSystemController@deleteCoupon' );
+Route::get( '/examples/coupon-system/delete_coupon', 'Examples\CouponSystemController@deleteCoupon' );
 
 // Resume
 Route::get('/resume', ['uses' => 'ResumeController@index']);
