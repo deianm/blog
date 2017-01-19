@@ -30,13 +30,13 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+        'secret' => 'sk_test_218HEd0JJqGluYYJ95vLbOfw',
     ],
+
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
         'redirect' => env('GITHUB_REDIRECT'),
     ],
+
 ];

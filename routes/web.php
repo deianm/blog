@@ -89,6 +89,14 @@ Route::get( '/examples/coupon-system/reverse_coupon', 'Examples\CouponSystemCont
 Route::post( '/examples/coupon-system/delete_coupon', 'Examples\CouponSystemController@deleteCoupon' );
 Route::get( '/examples/coupon-system/delete_coupon', 'Examples\CouponSystemController@deleteCoupon' );
 
+//Cartalyst-Stripe
+Route::post( '/examples/payments/stripe', 'Examples\StripeAPIController@index' );
+Route::get( '/examples/payments/stripe', 'Examples\StripeAPIController@index' );
+
+Route::post( '/examples/payments/make-payment', 'Examples\StripeAPIController@makePayment' );
+Route::get( '/examples/payments/make-payment', 'Examples\StripeAPIController@makePayment' );
+
+
 // Resume
 Route::get('/resume', ['uses' => 'ResumeController@index']);
 

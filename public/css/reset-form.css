@@ -1,0 +1,58 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+#payment-form-style > html, #payment-form-style >body, #payment-form-style >div, #payment-form-style > span, #payment-form-style > applet, #payment-form-style > object, #payment-form-style > iframe,
+#payment-form-style > h1, #payment-form-style > h2, #payment-form-style > h3, #payment-form-style > h4, #payment-form-style > h5, #payment-form-style > h6, #payment-form-style > p, #payment-form-style > blockquote, #payment-form-style > pre,
+#payment-form-style > a, #payment-form-style > abbr, #payment-form-style > acronym, #payment-form-style > address, #payment-form-style > big, #payment-form-style > cite, #payment-form-style > code,
+#payment-form-style > del, #payment-form-style > dfn, #payment-form-style > em, #payment-form-style > img, #payment-form-style > ins, #payment-form-style > kbd, #payment-form-style > q, #payment-form-style > s, #payment-form-style > samp,
+#payment-form-style > small, #payment-form-style > strike, #payment-form-style > strong, #payment-form-style > sub, #payment-form-style > sup, #payment-form-style > tt, #payment-form-style > var,
+#payment-form-style >b, #payment-form-style >u, #payment-form-style >i, #payment-form-style > center,
+#payment-form-style >dl,#payment-form-style > dt,#payment-form-style > dd, #payment-form-style > ol, #payment-form-style > ul, #payment-form-style > li,
+fieldset, #payment-form-style > form, #payment-form-style > label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+#payment-form-style > article,
+#payment-form-style > aside,
+#payment-form-style > details,
+#payment-form-style > figcaption,
+#payment-form-style > figure,
+#payment-form-style > footer,
+#payment-form-style > header,
+#payment-form-style > hgroup,
+#payment-form-style > menu,
+#payment-form-style > nav,
+#payment-form-style > section,
+#payment-form-style > main {
+	display: block;
+}
+#payment-form-style > body {
+	line-height: 1;
+}
+#payment-form-style > ol, ul {
+	list-style: none;
+}
+#payment-form-style > blockquote, q {
+	quotes: none;
+}
+#payment-form-style > blockquote:before, #payment-form-style > blockquote:after,
+#payment-form-style > q:before, #payment-form-style > q:after {
+	content: '';
+	content: none;
+}
+#payment-form-style > table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
