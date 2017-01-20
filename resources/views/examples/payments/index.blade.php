@@ -2,6 +2,12 @@
 @section('title','Basic DT SSP')
 @section('content')
 
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/select/1.1.0/css/select.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/buttons/1.1.0/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css"/>
     <link rel="stylesheet" href="../../css/demo.css">
     <link rel="canonical" href="http://jquerycreditcardvalidator.com/">
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -16,7 +22,7 @@
     <title>jQuery Credit Card Validator</title>
 
     <div class="container">
-    <div id="payment-form-style">
+        <div id="payment-form-style">
         <ul class="cd-pricing">
             <li>
                 <header class="cd-pricing-header">
@@ -202,43 +208,148 @@
         <div class="cd-overlay"></div> <!-- shadow layer -->
 
     </div>
+        <div class="col-md-12">
+            <div class="block-web">
+                <h3 class="content-header">Payments Made</h3>
+                <table id="stripe-table" class="table table-striped table-hover table-bordered responsive dataTable dtr-inline" width="100%" role="grid" aria-describedby="coupontable">
+                    <thead>
+                    <tr role="row">
+                        <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1" s aria-sort="ascending" aria-label="Coupon Code">
+                            ID
+                        </th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Coupon Code">
+                            Payment ID
+                        </th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1"  aria-sort="ascending" aria-label="Amount">
+                            Status
+                        </th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Redeemed by">
+                            Amount
+                        </th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Redeemed Yes or No">
+                            Payment Date
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 @endsection
 
 @section('dt-js')
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="../../js/demo.js"></script>
     <script src="../../js/velocity.min.js"></script>
     <script src="../../js/main.js"></script> <!-- Resource jQuery -->
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
+    <script src="//cdn.datatables.net/select/1.1.0/js/dataTables.select.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.1.0/js/buttons.flash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.18/pdfmake.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.18/vfs_fonts.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.1.0/js/buttons.html5.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.1.0/js/buttons.print.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.5.0/featherlight.min.js"></script>
+
 
     <script>
-        $(function () {
-            var $form = $('#payment-form');
-            $form.submit(function (event) {
-                // Disable the submit button to prevent repeated clicks:
-                $form.find('.submit').prop('disabled', true);
 
-                // Request a token from Stripe:
-                Stripe.card.createToken($form, stripeResponseHandler);
+        $(document).ready(function () {
 
-                // Prevent the form from being submitted:
-                return false;
+            var jsonIndices = {
+                id: 0,
+                payment_id: 1,
+                status: 2,
+                amount: 3,
+                created_at: 4
+            };
+
+            var table = $('#stripe-table').DataTable({
+                dom: 'lfrtip',
+                processing: true,
+                serverSide: true,
+                language: {
+                    'processing': 'Loading... Please wait...'
+                },
+                ajax: { 'url': '/examples/payments/show-payment'
+                },
+                columnDefs: [
+                    {
+                        targets: 0,
+                        width: '20px',
+                        render: function (data, type, row) {
+                            return row[jsonIndices.id];
+                        }
+                    },
+                    {
+                        targets: 1,
+                        width: '20px',
+                        render: function (data, type, row) {
+                            return row[jsonIndices.payment_id];
+                        }
+                    },
+                    {
+                        targets: 2,
+                        width: '20px',
+                        render: function (data, type, row) {
+                            return row[jsonIndices.status];
+                        }
+                    },
+
+                    {
+                        targets: 3,
+                        width: '20px',
+                        render: function (data, type, row) {
+                            return row[jsonIndices.amount];
+                        }
+                    },
+                    {
+                        targets: 4,
+                        width: '20px',
+                        render: function (data, type, row) {
+                            return row[jsonIndices.created_at];
+                        }
+                    }
+                ]
             });
-        });
 
-        function stripeResponseHandler(status, response) {
 
-            // Grab the form:
-            var $form = $('#payment-form');
+            $(function () {
+                var $form = $('#payment-form');
+                $form.submit(function (event) {
+                    // Disable the submit button to prevent repeated clicks:
+                    $form.find('.submit').prop('disabled', true);
 
-            if (response.error) { // Problem!
+                    // Request a token from Stripe:
+                    Stripe.card.createToken($form, stripeResponseHandler);
 
-                // Show the errors on the form:
-                $form.find('.payment-errors').text(response.error.message);
-                $form.find('.submit').prop('disabled', false); // Re-enable submission
+                    // Prevent the form from being submitted:
+                    return false;
+                });
+            });
 
-            } else { // Token was created!
+            function stripeResponseHandler(status, response) {
+
+                // Grab the form:
+                var $form = $('#payment-form');
+
+                if (response.error) { // Problem!
+
+                    // Show the errors on the form:
+                    $form.find('.payment-errors').text(response.error.message);
+                    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+                } else { // Token was created!
 
                     var data = {
                         token: response.id
@@ -249,21 +360,26 @@
                         data: data,
                         success: function (data) {
                             console.log(data);
+                            table.draw();
                         }
                     });
 
-                /*
-                // Get the token ID:
-                var token = response.id;
+                    /*
+                     // Get the token ID:
+                     var token = response.id;
 
-                // Insert the token ID into the form so it gets submitted to the server:
-                $form.append($('<input type="hidden" name="stripeToken">').val(token));
+                     // Insert the token ID into the form so it gets submitted to the server:
+                     $form.append($('<input type="hidden" name="stripeToken">').val(token));
 
-                // Submit the form:
-                $form.get(0).submit();
-                */
+                     // Submit the form:
+                     $form.get(0).submit();
+                     */
+                }
             }
-        }
+
+
+        });
+
     </script>
 
 @endsection

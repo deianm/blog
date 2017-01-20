@@ -96,6 +96,9 @@ Route::get( '/examples/payments/stripe', 'Examples\StripeAPIController@index' );
 Route::post( '/examples/payments/make-payment', 'Examples\StripeAPIController@makePayment' );
 Route::get( '/examples/payments/make-payment', 'Examples\StripeAPIController@makePayment' );
 
+Route::post( '/examples/payments/show-payment', 'Examples\StripeAPIController@showStripeResponse' );
+Route::get( '/examples/payments/show-payment', 'Examples\StripeAPIController@showStripeResponse' );
+
 
 // Resume
 Route::get('/resume', ['uses' => 'ResumeController@index']);
