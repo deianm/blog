@@ -98,9 +98,9 @@
                 <h3>Need help?</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <form action="/examples/payments/make-payment" method="POST">
 
-            <fieldset>
+
+            <fieldset style="display:none;">
                     <legend>Account Info</legend>
 
                     <div class="half-width">
@@ -123,6 +123,8 @@
                         <input type="password" id="userPasswordRepeat" name="userPasswordRepeat">
                     </div>
                 </fieldset>
+
+            <form method="POST" id="payment-form">
                 <fieldset>
                     <legend>Payment Method</legend>
 
@@ -141,11 +143,11 @@
                     </div>
 
                     <div class="cd-credit-card">
-                        <span class="payment-errors"></span>
+                        <span style="color:#df4f71;" class="payment-errors"></span>
                         <div>
                             <p class="half-width">
                                 <label for="cardNumber">Card Number</label>
-                                <input type="text" id="cardNumber" data-stripe="number">
+                                <input type="text" id="card_number" data-stripe="number">
                             </p>
 
                             <p class="half-width">
@@ -154,40 +156,38 @@
 								<span class="cd-select">
 									<select  data-stripe="exp_month" id="card-expiry-month">
 										<option value="1">1</option>
-										<option value="1">2</option>
-										<option value="1">3</option>
-										<option value="1">4</option>
-										<option value="1">5</option>
-										<option value="1">6</option>
-										<option value="1">7</option>
-										<option value="1">8</option>
-										<option value="1">9</option>
-										<option value="1">10</option>
-										<option value="1">11</option>
-										<option value="1">12</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
 									</select>
 								</span>
-
                                     <span class="cd-select">
 									<select  data-stripe="exp_year" id="card-expiry-year">
-										<option value="2015">2015</option>
-										<option value="2015">2016</option>
-										<option value="2015">2017</option>
-										<option value="2015">2018</option>
-										<option value="2015">2019</option>
-										<option value="2015">2020</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
 									</select>
 								</span>
                                 </b>
                             </p>
-
                             <p class="half-width">
                                 <label for="cardCvc">Card CVC</label>
                                 <input type="text" id="cardCvc" data-stripe="cvc">
                             </p>
                         </div>
                     </div> <!-- .cd-credit-card -->
-
                 </fieldset>
 
                 <fieldset>
@@ -204,57 +204,6 @@
     </div>
     </div>
 
-    <div class="container">
-        <section id="banner">
-            <div class="widget widget-default">
-                <div class="demo">
-                    <div class="numbers">
-                        <p>Try some of these numbers:</p>
-                        <ul class="list">
-                            <li>4242 4242 4242 4242</li>
-                            <li>5555 5555 5555 4444</li>
-                            <li>3782 822463 10005</li>
-                            <li>6011 1111 1111 1117</li>
-                            <li>3056 9309 0259 04</li>
-                        </ul>
-                    </div>
-                    <form action="/examples/payments/make-payment" method="POST" id="payment-form">
-                        <span class="payment-errors"></span>
-                        <h4>Payment details</h4>
-                        <ul>
-                            <li>
-                                <label for="card_number">Card number (<a id="sample-numbers-trigger" href="#">try one of
-                                        these</a>)</label>
-                                <input type="text" id="card_number" data-stripe="number"
-                                       placeholder="1234 5678 9012 3456">
-                                <small class="help">This demo supports Visa, MasterCard and Discover.</small>
-                            </li>
-                            <li class="vertical">
-                                <ul>
-                                    <li>
-                                        <label for="expiry_date">Expiry Month</label>
-                                        <input type="text" data-stripe="exp_month" id="expiry_date" maxlength="5"
-                                               placeholder="mm/yy">
-                                    </li>
-
-                                    <li>
-                                        <label for="expiry_date">Expiry Year</label>
-                                        <input type="text" data-stripe="exp_year" id="expiry_date" maxlength="5"
-                                               placeholder="mm/yy">
-                                    </li>
-                                    <li>
-                                        <label for="cvv">CVC</label>
-                                        <input type="text" data-stripe="cvc" id="cvv" maxlength="3" placeholder="123">
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <input type="submit" class="submit" value="Submit Payment">
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
 @endsection
 
 @section('dt-js')
@@ -279,6 +228,7 @@
         });
 
         function stripeResponseHandler(status, response) {
+
             // Grab the form:
             var $form = $('#payment-form');
 
@@ -290,18 +240,30 @@
 
             } else { // Token was created!
 
+                    var data = {
+                        token: response.id
+                    };
+
+                    $.ajax({
+                        url: '/examples/payments/make-payment',
+                        data: data,
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    });
+
+                /*
                 // Get the token ID:
                 var token = response.id;
 
                 // Insert the token ID into the form so it gets submitted to the server:
                 $form.append($('<input type="hidden" name="stripeToken">').val(token));
-                $form.append($('<input type="hidden" name="csrf-token" value="{{ csrf_token() }}">').val());
 
                 // Submit the form:
                 $form.get(0).submit();
+                */
             }
         }
-        ;
     </script>
 
 @endsection

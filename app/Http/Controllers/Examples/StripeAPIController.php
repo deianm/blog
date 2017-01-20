@@ -17,15 +17,20 @@ class StripeAPIController extends Controller
 
     }
 
-    public function makePayment(){
+    public function makePayment(Request $request_token){
+
+        //Replace the fixed amounts after testing
+        $request = $request_token->all();
+
+        $token = $request['token'];
 
         $charge = Stripe::charges()->create([
-            'customer' => 'cus_9xP8n3HnZPLYjx',
+            'source' => $token,
             'currency' => 'USD',
-            'amount'   => 50.49,
+            'amount'   => 40.99,
         ]);
 
-        echo $charge['id'];
+        echo json_encode($charge);
 
     }
 }
