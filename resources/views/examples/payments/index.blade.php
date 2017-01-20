@@ -25,6 +25,8 @@
         <ul>
             <li>Change css for a more appealing look</li>
             <li>Add verification text and reload the div with empty fields before processing another payment</li>
+            <li>Fix datatables icons</li>
+            <li>Change amounts to plans instead of int values in controller</li>
         </ul>
         <div id="payment-form-style">
         <ul class="cd-pricing">
@@ -216,7 +218,7 @@
             <div class="block-web">
                 <h3 class="content-header">Payments Made</h3>
                 <table id="stripe-table" class="table table-striped table-hover table-bordered responsive dataTable dtr-inline" width="100%" role="grid" aria-describedby="coupontable">
-                    <thead>
+                    <thead style="background: #95ac5f; color: white;">
                     <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="coupontable" rowspan="1" colspan="1" s aria-sort="ascending" aria-label="Coupon Code">
                             ID
