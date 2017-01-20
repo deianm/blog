@@ -44,6 +44,8 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/examples/datatables">Datatables</a></li>
+                            <li><a href="/examples/payments/stripe">Stripe Payments</a></li>
+                            <li><a href="/examples/coupon-system">Coupon System</a></li>
                             <li><a href="#">More Coming Soon!</a></li>
                         </ul>
                     </li>

@@ -22,7 +22,6 @@ $(document).ready(function () {
         status: 7
     };
 
-    $('[data-toggle="tooltip"]').tooltip();
     var table = $('#advertisers-coupon-table').DataTable({
         dom: 'lfrtip',
         processing: true,
@@ -254,6 +253,7 @@ $(document).ready(function () {
             confirmed_advertiser_id: $('input[name="confirmed_advertiser_id[]"]').serializeArray()
         };
 
+        console.log(data);
 
         $.ajax({
             url: '/examples/coupon-system/confirmed_ajax_coupon',

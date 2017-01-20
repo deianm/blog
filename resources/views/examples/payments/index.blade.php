@@ -19,9 +19,13 @@
         Stripe.setPublishableKey('pk_test_xBmPIe9HuWX1FWhInyrVKCle');
     </script>
 
-    <title>jQuery Credit Card Validator</title>
 
     <div class="container">
+        <p>TODO</p>
+        <ul>
+            <li>Change css for a more appealing look</li>
+            <li>Add verification text and reload the div with empty fields before processing another payment</li>
+        </ul>
         <div id="payment-form-style">
         <ul class="cd-pricing">
             <li>
@@ -133,7 +137,7 @@
             <form method="POST" id="payment-form">
                 <fieldset>
                     <legend>Payment Method</legend>
-
+                    <p>CC: 4242424242424242 Date:Any CVC:Any</p>
                     <div>
                         <ul class="cd-payment-gateways">
                             <li>
@@ -246,7 +250,6 @@
     <script src="../../js/velocity.min.js"></script>
     <script src="../../js/main.js"></script> <!-- Resource jQuery -->
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-    <script src="../../js/bootstrap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -260,7 +263,6 @@
     <script src="//cdn.datatables.net/buttons/1.1.0/js/buttons.html5.min.js"></script>
     <script src="//cdn.datatables.net/buttons/1.1.0/js/buttons.print.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.5.0/featherlight.min.js"></script>
-
 
     <script>
 
@@ -364,16 +366,6 @@
                         }
                     });
 
-                    /*
-                     // Get the token ID:
-                     var token = response.id;
-
-                     // Insert the token ID into the form so it gets submitted to the server:
-                     $form.append($('<input type="hidden" name="stripeToken">').val(token));
-
-                     // Submit the form:
-                     $form.get(0).submit();
-                     */
                 }
             }
 
