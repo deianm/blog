@@ -92,9 +92,32 @@ Route::get( '/examples/coupon-system/delete_coupon', 'Examples\CouponSystemContr
 // Resume
 Route::get('/resume', ['uses' => 'ResumeController@index']);
 
+
+//EDMUNDS
+
+Route::get( '/edmunds-testing/', 'Edmunds\Homepage\HomeController@index');
+
+Route::post( '/edmunds-testing/endpoint-build', 'Edmunds\GRequest\RequestBuildController@endpoint_build');
+Route::get( '/edmunds-testing/endpoint-build', 'Edmunds\GRequest\RequestBuildController@endpoint_build');
+
+Route::post( '/edmunds/fetch-endpoints', 'Edmunds\GRequest\RequestBuildController@fetch_endpoints');
+Route::get( '/edmunds/fetch-endpoints', 'Edmunds\GRequest\RequestBuildController@fetch_endpoints');
+
+Route::post( '/edmunds/build-payload', 'Edmunds\GRequest\RequestBuildController@build_payload');
+Route::get( '/edmunds/build-payload', 'Edmunds\GRequest\RequestBuildController@build_payload');
+
+Route::get( '/edmunds/get-all-vehicles', 'Edmunds\VehicleAPI\VehicleMakeController@get_all_car_makes');
+Route::get( '/edmunds/get-car-make-details-by-make-nicename','Edmunds\VehicleAPI\VehicleMakeController@get_car_make_details_by_make_nicename');
+Route::get( '/edmunds/get-car-make-count','Edmunds\VehicleAPI\VehicleMakeController@get_car_makes_count');
+
+
 // SiteMap
 Route::get('sitemap', 'SiteMapController@index');
 Route::get('sitemap.xml', 'SiteMapController@index');
+
+Route::get('/jwt', ['uses' => 'JwtController@index']);
+Route::get('/jwt-get', ['uses' => 'JwtController@index']);
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
 

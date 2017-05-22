@@ -48,10 +48,11 @@
 
 <body id="portfolio">
 <div class="container wrapper">
+
+    <p>Only Basic Server Side has an available example for now. More is coming Soon with source code.</p>
     <br/>
     <hr>
     <div style="text-align: center;">
-    <h3>Ongoing project examples will be added soon, for now only cats will be displayed!</h3>
     </div>
     <center>
         <div style="margin-left: 29%;">
@@ -72,7 +73,7 @@
         <li class="span3 clearfix" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Basic CSS</h4>
                     </div>
@@ -82,7 +83,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/496a39cc7cb02b72e89e124363dd2f7b.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Basic Filtering</h4>
                     </div>
@@ -90,9 +91,9 @@
             </a>
         </li>
         <li class="span3" data-tag='media'>
-            <a href="#">
+            <a href="/examples/datatables/basic-ssp">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/ac275fc6f5adb7e2a702323c5bbccc23.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Basic Server Side</h4>
                     </div>
@@ -102,7 +103,7 @@
         <li class="span3" data-tag='brand'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/79b4f604ceb67efa804d5b32f20f8c13.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Advanced CSS</h4>
                     </div>
@@ -112,7 +113,7 @@
         <li class="span3" data-tag='art'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/496a39cc7cb02b72e89e124363dd2f7b.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Advanced Filtering</h4>
                     </div>
@@ -122,7 +123,7 @@
         <li class="span3" data-tag='media'>
             <a href="#">
                 <div class="thumbnail">
-                    <img alt="270x170" src="/storage/images/ac275fc6f5adb7e2a702323c5bbccc23.jpeg"/>
+                    <img alt="270x170" src="/storage/images/753d5b485f00e8126ac8425e7d6487ee.jpeg"/>
                     <div class="caption">
                         <h4>Advanced Server Side</h4>
                     </div>

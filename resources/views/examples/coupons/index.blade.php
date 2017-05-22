@@ -20,6 +20,12 @@
 
     <!--COUPON FORM -->
     <div class="container">
+        <p>TODO</p>
+        <ul>
+            <li>Debug js that's preventing the drop down</li>
+            <li>Add a user side to redeem the coupons</li>
+            <li>Change css for a more appealing look</li>
+        </ul>
     <div class="row">
         <div class="col-md-4">
             <div class="block-web">

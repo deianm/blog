@@ -16,7 +16,7 @@
                         <h5 class="widget-user-desc">{{ $user->description or 'No description'}}</h5>
                     </div>
                     <div class="widget-user-image" id="upload-avatar">
-                        <img style="background-color: #607D8B" class="img-circle" src="{{ $user->avatar  }}">
+                        <img style="background-color: #607D8B" class="img-circle" src="/storage/images/0eb6436bf5678494dd924e23ce761c2b.jpeg">
                     </div>
                     <div class="widget-user-body mt-30">
                         @can('manager',$user)

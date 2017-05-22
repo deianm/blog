@@ -31,13 +31,13 @@
             .click(function () {
                 var deleteForm = $(this).find("form");
                 swal({
-                        title: "Are you sure?",
-                        text: "You are about to delete" + $(this).data('modal-target'),
+                        title: "你确定?",
+                        text: "你将会删除" + $(this).data('modal-target'),
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
-                        cancelButtonText: "Never mind ;)",
-                        confirmButtonText: "Confirm >:)",
+                        cancelButtonText: "再考虑考虑",
+                        confirmButtonText: "确定删除!",
                         closeOnConfirm: true
                     },
                     function () {
@@ -235,41 +235,3 @@ var moveEnd = function (obj) {
         obj.selectionStart = obj.selectionEnd = len;
     }
 };
-
-
-
-require('./bootstrap');
-
-var VueTables = require('vue-tables-2');
-Vue.use(VueTables.client, {
-    compileTemplates: true,
-    highlightMatches: true,
-    pagination: {
-        dropdown:true,
-        chunk:5
-    },
-    filterByColumn: true,
-    texts: {
-        filter: "Search:"
-    },
-    datepickerOptions: {
-        showDropdowns: true
-    }
-});
-
-const app = new Vue({
-    el: '#app',
-    data: {
-        columns: ['id','name','age'],
-        tableData: [
-            {id:1, name:"John",age:"20"},
-            {id:2, name:"Jane",age:"24"},
-            {id:3, name:"Susan",age:"16"},
-            {id:4, name:"Chris",age:"55"},
-            {id:5, name:"Dan",age:"40"}
-        ],
-        options: {
-            // see the options API
-        }
-    }
-});

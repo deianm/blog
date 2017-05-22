@@ -101,7 +101,7 @@ class CommentController extends Controller
         $this->checkPolicy('manager', $comment);
 
         if ($this->commentRepository->delete($comment, request('force') == 'true')) {
-            return back()->with('success', 'Success');
+            return back()->with('success', '删除成功');
         }
         return back()->withErrors('删除失败');
     }

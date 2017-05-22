@@ -22,7 +22,6 @@ $(document).ready(function () {
         status: 7
     };
 
-    $('[data-toggle="tooltip"]').tooltip();
     var table = $('#advertisers-coupon-table').DataTable({
         dom: 'lfrtip',
         processing: true,

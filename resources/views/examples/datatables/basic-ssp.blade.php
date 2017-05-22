@@ -5,6 +5,10 @@
     <link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet">
 
     <div class="container">
+        <p>TODO</p>
+        <ul>
+            <li>Change css for a more appealing look</li>
+        </ul>
         <div class="row">
             <div class="col-md-12">
                 <div class="block-web">

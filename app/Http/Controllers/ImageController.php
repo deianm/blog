@@ -35,6 +35,7 @@ class ImageController extends Controller
      * @return mixed
      */
 
+
     public function uploadImage(Request $request)
     {
         $this->validate($request, [
